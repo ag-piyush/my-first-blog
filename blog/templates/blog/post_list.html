@@ -18,5 +18,13 @@
             <h2><a href="">My second post</a></h2>
             <p>When the snows fall and the white winds blow, the lone wolf dies but the pack survives.</p>
         </div>
+
+        {% for post in posts %}
+    		<div>
+        		<p>published: {{ post.published_date }}</p>
+        		<h2><a href="">{{ post.title }}</a></h2>
+        		<p>{{ post.text|linebreaksbr }}</p>
+    		</div>
+		{% endfor %}
     </body>
 </html>
